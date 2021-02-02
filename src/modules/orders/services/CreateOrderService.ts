@@ -1,4 +1,3 @@
-import Customer from "@modules/costumers/typeorm/entities/Customer";
 import CustomersRepository from "@modules/costumers/typeorm/repositories/CustomersRepository";
 import { ProductRepository } from "@modules/products/typeorm/repositories/ProductsRepository";
 import AppError from "@shared/errors/AppError";
@@ -73,7 +72,7 @@ class CreateOrderService{
 
     const updatedProductQuantity = order_products.map(
       product => ({
-        id: product.id,
+        id: product.product_id,
         quantity: existsProducts.filter(p => p.id === product.product_id)[0].quantity - product.quantity,
       })
     );
