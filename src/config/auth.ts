@@ -2,7 +2,7 @@ import sessionRouter from "@modules/users/routes/sessions.routes";
 
 export default {
   jwt: {
-    secret: 'efe8c1d3dc4d7e4bf6be83c914ecc5f7',
+    secret: process.env.APP_SECRET,
     expiresIn: '1d'
   }
 }
